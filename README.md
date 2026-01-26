@@ -1,4 +1,4 @@
-#Piano Experiments
+# Piano Experiments
 
 This repo contains live coding scripts I have used to explore different chord progressions and voicings.
 
