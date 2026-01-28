@@ -2,23 +2,24 @@
 // Dmaj Bbmaj Gm Am/C Bm F#m Gm Ebmaj Dmaj
 // alternating single and double voicings in L/R hand divisions
 
-setcps(30)
+setcps(40)
 
 // Left hand
 $: note(cat(
   "d3 [a3,f#3] ~ [a3,f#3] d3 [a3,f#3] d3",
   "bb2 [f3,d3] ~ [f3,d3] bb2 [f3,d3] bb2",
-  "g2 [d3,bb2] ~ [d3,bb2] g2 [d3,bb2] ~",
-  "c3 [a3,e3] ~ [a3,e3] c3 [a3,e3] ~",
+  "g2 [d3,bb2] ~ [d3,bb2] g2 [d3,bb2] g2",
+  "c3 [a3,e3] ~ [a3,e3] c3 [a3,e3] c3",
   "b2 [f#3,d3] ~ [f#3,d3] b2 [f#3,d3] b2",
   "f#2 [c#3,a2] ~ [c#3,a2] f#2 [c#3,a2] f#2",
-  "g2 [d3,bb2] ~ [d3,bb2] g2 [d3,bb2] ~",
-  "eb3 [bb3,g3] ~ [bb3,g3] eb3 [bb3,g3] ~",
+  "g2 [d3,bb2] ~ [d3,bb2] g2 [d3,bb2] g2",
+  "eb3 [bb3,g3] ~ [bb3,g3] eb3 [bb3,g3] eb3",
   "d3 [a3,f#3] ~ [a3,f#3] d3 ~ ~"
 )).sound("piano")
   .velocity(rand.range(0.4, 0.6))
-  .lpf(2500)
-  .room(0.5).size(0.5)
+  .lpf(1500)
+  .legato(2.8)
+  //.room(0.2).size(0.1)
   .slow(63)
 
 // Right hand. inversions one octave up, offset pattern
@@ -34,6 +35,16 @@ $: note(cat(
   "~ f#4 [d4,a4] ~ ~ ~ ~ ~"
 )).sound("piano")
   .velocity(rand.range(0.35, 0.55))
-  .lpf(3000)
-  .room(0.5).size(0.5)
+  .lpf(1000)
+  .legato(2.8)
+  //.room(0.2).size(0.1)
+  .slow(63)
+
+// accent notes to play with
+$: note(cat(
+  "d5 ~ ~ ~ ~ ~ ~",
+)).sound("piano")
+  .velocity(rand.range(0.4, 0.6))
+  .lpf(1500)
+  //.room(0.2).size(0.1)
   .slow(63)
